@@ -1,38 +1,24 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Sky</ion-title>
+    <ion-buttons left>
+      <button ion-button>
+        <label>
+          </label>
+      </button>
+    </ion-buttons>
+    <ion-title text-canter>กระดานข้อความ</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="goPageAddContent()">
+        <label>+</label>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-grid>
-    <ion-row>
-      <ion-col col-4>
-        <button >สถานที่ท่องเที่ยว</button>
-      </ion-col>
-      <ion-col col-4>
-        <button>กระดานสนทนา</button>
-      </ion-col>
-      <ion-col col-4>
-        <button>กระเป๋าเงิน</button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-  <div>
-      <ion-img width="280" height="80" src="../../src/assets/"></ion-img>
-      <ion-img width="280" height="80" src="../../src/assets/"></ion-img>
-      <ion-img width="280" height="80" src="../../src/assets/"></ion-img>
-      <ion-img width="280" height="80" src="../../src/assets/"></ion-img>
-  </div>
-    <button ion-button round full>Log Out</button>
-  
-</ion-content>
-
 <ion-content>
-
-
-</ion-content>
+    <ion-list>
+      <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+        {{ item }}
+      </button>
+    </ion-list>
+  </ion-content>
