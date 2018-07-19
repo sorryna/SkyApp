@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { AddContentPage } from '../add-content/add-content';
-import { ContentDetailPage } from '../content-detail/content-detail';
+import { ListPage } from '../list/list';
 
 @Component({
   selector: 'page-home',
